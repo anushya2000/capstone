@@ -1,0 +1,42 @@
+---
+title: "Predictor Model"
+author: "Anushya K"
+date: "24/10/2020"
+output: 
+ revealjs::revealjs_presentation:
+    theme: night
+    center: true
+    transition: concave
+---
+
+## Project overview
+
+This presentation is the final assignment for the data science Capstone project. 
+The aim of the project was to build a predictive model of English text. This app was created using Shiny Application in RStudio.
+
+
+## The prediction model
+
+The model for the next word prediction was based on the Katz Back-off algorithm. This process works as follows:
+
+- The .rds file containing the metadata are loaded.
+- Quadgram is the first N-gram to be used. This takes into account the first three words that user has provided.
+- If no match is found, the trigram is used. This takes the last two words of the user input into account.
+- If there is still no match found, bigram is used next. Bigram only uses the last word of the user input.
+- When no match is found, the application will return a comment that no match is found due to the small sample size.
+
+
+## Downloading and Getting Data
+
+To build the app and the predictive model, a series of steps were followed that were:
+
+- Downloading the data from the source.
+- Cleaning and processing data is the most important step, to set data to the form it can be treat, and remove several things such as white spaces,punctuation, numbers and more.
+- Build the correspondind n-grams, and saving them to save computational effort and time.
+- The user input terms are extracted from the N-Grams and sorted according to the frequency in descending order, to predict the next possible words.
+- Build the Shiny App and deploy it.
+
+## Link to the app
+
+Link for the Shiny app:
+https://ctarsenault.shinyapps.io/word_prediction_application/
