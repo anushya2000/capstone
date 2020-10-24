@@ -1,4 +1,6 @@
-# capstone
+# Capstone Project
+
+This the final project of Data Science Specialization.
 
 The goal of this exercise is to create a product to highlight the prediction algorithm that you have built and to provide an interface that can be accessed by others. For this project you must submit:
 
